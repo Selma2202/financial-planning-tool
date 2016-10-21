@@ -1,0 +1,33 @@
+html
+	head
+		title= "Financial planner - RESULTS"
+		link(href="http://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+		link(type="text/css" rel="stylesheet" href="materialize-css/dist/css/materialize.min.css"  media="screen,projection")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel='stylesheet', href='styles.css')
+	body
+		div(class="maindiv")
+			h1 Results
+			div(class="row")
+				div(class="col s3")
+					a(href='index')
+						img(src="home.png")
+					a(href='inputplan')
+						img(src="calculator.png")
+				div(class="col s9")
+					h3 Retirement statistics
+					br
+					p Hi #{name}! How are you today? You may be only #{age} years old right now, but it is time to start thinking about the future: let's start investing! You may not be able to imagine this, but with an initial investment of just €#{finStartcapital} and a monthly addition of €#{finMonthlyadd}, you got quite the retirement fund build up for when you plan to retire at age #{retireAge}. 
+					br
+					p Interest rates obviously fluctuate over time. To present you with the ultimate experience, we have calculated your retirement fund based on three different interest rates: a pessimistic rate (#{pensionIntPessimistic}), an average rate (#{pensionIntAverage}), and an optimistic rate (#{pensionIntOptimistic}). This way we'll show you that even in a bad economy, investing makes sense!
+					br
+					h3 Your investment at #{retireAge} is worth:
+					p At a pessimistic interest rate: €#{endamountPes}
+					p At an average interest rate: €#{endamountAv}
+					p At an optimistic interest rate: €#{endamountOpt}
+
+
+			script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+			script(type="text/javascript" src="materialize-css/dist/js/materialize.min.js")
+
+//- enkele aanhalingstekens vs dubbele? nog checken

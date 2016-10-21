@@ -33,11 +33,11 @@ Workflow:
 - bootstrap 'downloaden'/uit andere opdracht halen
 
 in app.js:
-- zet de vaste waarden bovenin
+<!-- - zet de vaste waarden bovenin
 - zet de local port onderin
-- app get index --> pagina zichtbaar krijgen
-- app get inputplan --> pagina zichtbaar krijgen
-- app post inputplan --> pagina input kunnen verwerken
+- app get index -> pagina zichtbaar krijgen
+- app get inputplan -> pagina zichtbaar krijgen -->
+- app post inputplan -> pagina input kunnen verwerken
 
 in index.pug
 - bootstrap template
