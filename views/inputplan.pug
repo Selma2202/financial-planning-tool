@@ -1,0 +1,66 @@
+html
+	head
+		title= "Financial planner - CALCULATOR"
+		link(rel='stylesheet', href='styles.css')
+	body
+		div
+			h1 Calculator
+			p Add your personal details below.
+			br
+			table
+				form(method='post', action= 'addvictim')
+					//-input(type='hidden', name='_method', value='PUT')
+					tr
+						td
+							label Name: 
+						td
+							input(name='name', type='tekst', id='name', placeholder = 'Your name')
+						td
+							p This is how we will address you.
+					tr
+						td
+							label Age: 
+						td
+							input(name='age', type="number", id='myAge', placeholder = 'Your age' min="0" max="110")
+						td
+							p This is how we will address you.
+					tr
+						td
+							label Jouw leeftijd: 
+						td
+							input(name='myAge', type="number", id='myAge', placeholder = 'Hoe oud was je toen?' min="14" max="99")
+						td
+							p This is how we will address you.
+					tr
+						td
+							label Land: 
+						td
+							input(name='country', type='tekst', id='country', placeholder = 'In welk land gebeurde het?')
+						td
+							p This is how we will address you.
+					tr
+						td
+							label Land van herkomst: 
+						td
+							input(name='countryOrigin', type='tekst', id='countryOrigin', placeholder = 'Welk land kwam hij vandaan?')
+						td
+							p This is how we will address you.
+					tr
+						td
+							label Situatie: 
+						td
+							input(name='situation', type='tekst', id='situation', placeholder = 'Schets hier het gehele plaatje.')
+						td
+							p This is how we will address you.
+					tr
+						td
+							input(type='Submit', value='Toevoeguhhh', class='button')
+
+
+			h3 Wrong page?
+			ul
+				li 
+					a(href="index") Home
+
+
+//- enkele aanhalingstekens vs dubbele? nog checken
