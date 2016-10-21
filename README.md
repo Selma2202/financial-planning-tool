@@ -20,16 +20,16 @@ Vragen op eerste gezicht:
 - weer even bootstrap doorlezen
 
 Workflow:
-- make a repository
+<!-- - make a repository -->
 - .gitignore voor modules / ds store (gebruik ik wel modules?)
-- handmatig .gitignore toevoegen (ivm onzichtbaar)
+<!-- - handmatig .gitignore toevoegen (ivm onzichtbaar)
 - npm init
 - npm install express pug body-parser –-save
 - touch app.js
 - mkdir views
 - touch views/index.pug
 - touch views/inputplan.pug
-- touch data.json
+- touch data.json -->
 - bootstrap 'downloaden'/uit andere opdracht halen
 
 in app.js:
