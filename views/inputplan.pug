@@ -2,65 +2,86 @@ html
 	head
 		title= "Financial planner - CALCULATOR"
 		link(rel='stylesheet', href='styles.css')
+		link(href="http://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+		link(type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 	body
-		div
-			h1 Calculator
-			p Add your personal details below.
-			br
-			table
-				form(method='post', action= 'addvictim')
-					//-input(type='hidden', name='_method', value='PUT')
-					tr
-						td
-							label Name: 
-						td
-							input(name='name', type='tekst', id='name', placeholder = 'Your name')
-						td
-							p This is how we will address you.
-					tr
-						td
-							label Age: 
-						td
-							input(name='age', type="number", id='myAge', placeholder = 'Your age' min="0" max="110")
-						td
-							p This is how we will address you.
-					tr
-						td
-							label Jouw leeftijd: 
-						td
-							input(name='myAge', type="number", id='myAge', placeholder = 'Hoe oud was je toen?' min="14" max="99")
-						td
-							p This is how we will address you.
-					tr
-						td
-							label Land: 
-						td
-							input(name='country', type='tekst', id='country', placeholder = 'In welk land gebeurde het?')
-						td
-							p This is how we will address you.
-					tr
-						td
-							label Land van herkomst: 
-						td
-							input(name='countryOrigin', type='tekst', id='countryOrigin', placeholder = 'Welk land kwam hij vandaan?')
-						td
-							p This is how we will address you.
-					tr
-						td
-							label Situatie: 
-						td
-							input(name='situation', type='tekst', id='situation', placeholder = 'Schets hier het gehele plaatje.')
-						td
-							p This is how we will address you.
-					tr
-						td
-							input(type='Submit', value='Toevoeguhhh', class='button')
+		h1 Calculator
+		div(class="row")
+			div(class="col s3")
+				h3 Wrong page?
+				ul
+					li 
+						a(href="index") Home
+			div(class="col s9")
+
+				h3 Add your personal details below.
+				br
+				table
+					form(method='post', action= 'inputplan')
+						//-input(type='hidden', name='_method', value='PUT')
+						tr
+							td
+								label Name: 
+							td
+								input(name='name', type='tekst', id='name', placeholder = 'Your name' required)
+							td
+								p This is how we will address you.
+						tr
+							td
+								label Age: 
+							td
+								input(name='age', type="number", id='myAge', placeholder = 'Your age' min="0" max="110" required)
+							td
+								p What is your current age?
+						tr
+							td
+								label Start capital: 
+							td
+								input(name='finStartcapital', type="number", id='finStartcapital', placeholder = 'Your start capital' min="1" max="1000000" required)
+							td
+								p What is the amount you are starting the investment fund with?
+						tr
+							td
+								label Monthly addition: 
+							td
+								input(name='finMonthlyadd', type="number", id='finMonthlyadd', placeholder = 'Your monthly add' min="0" max="100000" required)
+							td
+								p How much can you spare to add to your investment every month?
+						tr
+							td
+								label Retirement age: 
+							td
+								input(name='pensionAge', type="number", id='pensionAge', placeholder = 'Retirement age' min="30" max="110" required)
+							td
+								p At what age do you wish to retire?
+						tr
+							td
+								label Pessimistic interest rate: 
+							td
+								input(name='pensionIntPessimistic', type="number", id='pensionIntPessimistic', value=1.02, readonly)
+							td
+								p This will calculate your fund at a set rate of 2% (pessimistic).
+						tr
+							td
+								label Average interest rate: 
+							td
+								input(name='pensionIntAverage', type="number", id='pensionIntAverage', value=1.04, readonly)
+							td
+								p This will calculate your fund at a set rate of 4% (average).
+						tr
+							td
+								label Optimistic interest rate: 
+							td
+								input(name='pensionIntOptimistic', type="number", id='pensionIntOptimistic', value=1.08, readonly)
+							td
+								p This will calculate your fund at a set rate of 8% (optimistic).
+						tr
+							td
+								input(type='Submit', value='Submit', class='button')
 
 
-			h3 Wrong page?
-			ul
-				li 
-					a(href="index") Home
-
+		script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+		script(type="text/javascript" src="js/materialize.min.js")
 
 //- enkele aanhalingstekens vs dubbele? nog checken
